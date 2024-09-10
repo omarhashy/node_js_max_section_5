@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extende: false }));
 //   console.log("in the mid");
 //   next();
 // });
-
+//hi
 // app.use("/", (req, res, next) => {
 //   next();
 // });
