@@ -1,18 +1,24 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const expressHbs = require('express-handlebars');
+const expressHbs = require("express-handlebars");
 
 const adminData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
 const app = express();
 
-
 //Set a default templating engine
 // app.set("view engine", "pug");
 
-app.engine("hbs", expressHbs());
+app.engine(
+  "hbs",
+  expressHbs({
+    layoutsDir: "views/layouts/",
+    defaultLayout: "main-layout",
+    extname: "hbs",
+  })
+);
 // app.set("view engine", "handlebars");
 app.set("view engine", "hbs");
 
